@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript">
+	var socket = io('http://localhost');
+	socket.on('note', function (data) {
+		console.log(data);
+
+		socket.emit('otherEvent', {'damn' : 'mother fucker!'});
+	});
+</script>
+</html>
